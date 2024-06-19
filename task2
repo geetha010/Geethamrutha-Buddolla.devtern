@@ -1,0 +1,29 @@
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+import seaborn as sns
+
+# Load the dataset
+
+data = pd.read_csv('uber_trips_data.csv')
+
+Data exploration and analysis here...
+
+# Create visualizations
+
+plt.figure(figsize=(12,6))
+
+# Example: Plot ride counts by hour
+
+sns.countplot(data=data, x='hour', hue='day_of_week')
+
+plt.title('Uber Ride Counts by Hour')
+
+plt.xlabel('Hour of the Day')
+
+plt.ylabel('Ride Count')
+
+plt.legend(title='Day of Week')
+
+plt.show()
